@@ -2,14 +2,11 @@ package org.example.chess_system.boardgame;
 
 public class Position {
     private int row;
-    private int colunm;
-
-    public Position() {
-    }
+    private int column;
 
     public Position(int row, int colunm) {
         this.row = row;
-        this.colunm = colunm;
+        this.column = colunm;
     }
 
     public int getRow() {
@@ -21,16 +18,16 @@ public class Position {
     }
 
     public int getColunm() {
-        return colunm;
+        return column;
     }
 
     public void setColunm(int colunm) {
-        this.colunm = colunm;
+        this.column = colunm;
     }
 
     @Override
     public String toString() {
-        return row + ", " + colunm;
+        return row + ", " + column;
     }
 
 }
