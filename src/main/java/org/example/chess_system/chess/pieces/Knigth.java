@@ -13,7 +13,7 @@ public class Knigth extends ChessPiece {
 
     @Override
     public String toString() {
-        return "C";
+        return "N";
     }
 
     private boolean canMove(Position positon) {
