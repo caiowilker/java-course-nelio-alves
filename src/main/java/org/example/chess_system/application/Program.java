@@ -1,6 +1,5 @@
 package org.example.chess_system.application;
 
-import org.example.chess_system.boardgame.Board;
 import org.example.chess_system.chess.ChessException;
 import org.example.chess_system.chess.ChessMatch;
 import org.example.chess_system.chess.ChessPiece;
@@ -46,11 +45,7 @@ public class Program {
                     chessMatch.replacePromotedPiece(type);
                 }
             }
-            catch (ChessException e) {
-                System.out.println(e.getMessage());
-                sc.nextLine();
-            }
-            catch (InputMismatchException e) {
+            catch (ChessException | InputMismatchException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
             }
