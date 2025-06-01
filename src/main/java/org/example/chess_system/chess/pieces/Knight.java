@@ -5,9 +5,9 @@ import org.example.chess_system.boardgame.Position;
 import org.example.chess_system.chess.ChessPiece;
 import org.example.chess_system.chess.Color;
 
-public class Knigth extends ChessPiece {
+public class Knight extends ChessPiece {
 
-    public Knigth(Board board, Color color) {
+    public Knight(Board board, Color color) {
         super(board, color);
     }
 
