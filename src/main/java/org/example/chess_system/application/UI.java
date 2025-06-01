@@ -1,5 +1,6 @@
 package org.example.chess_system.application;
 
+import org.example.chess_system.chess.ChessMatch;
 import org.example.chess_system.chess.ChessPiece;
 import org.example.chess_system.chess.ChessPosition;
 import org.example.chess_system.chess.Color;
@@ -55,6 +56,14 @@ public class UI {
             System.out.println();
         }
         System.out.println("  A B C D E F G H");
+    }
+
+    public static void printMath(ChessMatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+
     }
 
     public static void printBoard(ChessPiece[][] pieces,boolean[][] possibleMoves) {
