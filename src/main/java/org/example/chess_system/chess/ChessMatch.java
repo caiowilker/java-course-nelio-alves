@@ -92,8 +92,24 @@ public class ChessMatch {
         if (capturedPiece != null) {
             piecesOnTheBoad.remove(capturedPiece);
             capturedPieces.add(capturedPiece);
-
         }
+
+        if (p instanceof King && target.getColunm() == source.getColunm() + 2) {
+            Position sorceT = new Position(source.getRow(), source.getColunm() + 3);
+            Position targetT = new Position(source.getRow(), source.getColunm() + 1);
+            ChessPiece rook = (ChessPiece)board.removePiece(sorceT);
+            board.placePiece(rook, targetT);
+            rook.increaseMoveCount();
+        }
+
+        if (p instanceof King && target.getColunm() == source.getColunm() - 2) {
+            Position sorceT = new Position(source.getRow(), source.getColunm() - 4);
+            Position targetT = new Position(source.getRow(), source.getColunm() - 1);
+            ChessPiece rook = (ChessPiece)board.removePiece(sorceT);
+            board.placePiece(rook, targetT);
+            rook.increaseMoveCount();
+        }
+
         return capturedPiece;
     }
 
@@ -106,6 +122,22 @@ public class ChessMatch {
             board.placePiece(capturedPiece, source);
             capturedPieces.remove(capturedPiece);
             piecesOnTheBoad.add(capturedPiece);
+        }
+
+        if (p instanceof King && target.getColunm() == source.getColunm() + 2) {
+            Position sorceT = new Position(source.getRow(), source.getColunm() + 3);
+            Position targetT = new Position(source.getRow(), source.getColunm() + 1);
+            ChessPiece rook = (ChessPiece)board.removePiece(targetT);
+            board.placePiece(rook, sorceT);
+            rook.decreaseMoveCount();
+        }
+
+        if (p instanceof King && target.getColunm() == source.getColunm() - 2) {
+            Position sorceT = new Position(source.getRow(), source.getColunm() - 4);
+            Position targetT = new Position(source.getRow(), source.getColunm() - 1);
+            ChessPiece rook = (ChessPiece)board.removePiece(targetT);
+            board.placePiece(rook, sorceT);
+            rook.decreaseMoveCount();
         }
     }
 
