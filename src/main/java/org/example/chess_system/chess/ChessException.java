@@ -2,10 +2,10 @@ package org.example.chess_system.chess;
 
 import org.example.chess_system.boardgame.BoardExeption;
 
-public class ChessException extends BoardExeption {
+public class ChessException extends BoardException {
+	private static final long serialVersionUID = 1L;
 
-    public ChessException(String msg) {
-        super(msg);
-    }
-
+	public ChessException(String msg) {
+		super(msg);
+	}
 }
