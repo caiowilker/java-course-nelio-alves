@@ -1,14 +1,12 @@
 package org.example.chess_system.application;
 
-import org.example.chess_system.chess.ChessException;
-import org.example.chess_system.chess.ChessMatch;
-import org.example.chess_system.chess.ChessPiece;
-import org.example.chess_system.chess.ChessPosition;
+import org.example.chess_system.chess.*;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 
 public class UI {
