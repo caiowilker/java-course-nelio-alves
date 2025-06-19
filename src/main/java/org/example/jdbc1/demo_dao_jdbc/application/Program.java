@@ -5,6 +5,7 @@ import org.example.jdbc1.demo_dao_jdbc.model.dao.SellerDao;
 import org.example.jdbc1.demo_dao_jdbc.model.entities.Department;
 import org.example.jdbc1.demo_dao_jdbc.model.entities.Seller;
 
+import java.util.Date;
 import java.util.List;
 
 public class Program {
@@ -29,5 +30,10 @@ public class Program {
         for (Seller obj : list) {
             System.out.println(obj);
         }
+
+        System.out.println("\n===== Test 4: seller findByAll =====");
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00,department);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New Id: " + newSeller.getId());
     }
 }
